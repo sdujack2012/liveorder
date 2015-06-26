@@ -1,0 +1,49 @@
+
+body {
+    background: url('../img/log-in-background.jpg');
+    background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;
+}
+.ui-page {
+    background: transparent;
+}
+.ui-content{
+    background: transparent;
+}
+
+.ui-page {
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+}
+.ui-header {
+    position:fixed;
+    z-index:10;
+    top:0;
+    width:100%;
+    height: 40px;
+}
+.ui-content {
+    padding-top: 57px;
+    padding-bottom: 54px;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.ui-footer {
+    position:fixed;
+    z-index:10;
+   bottom:0;
+   width:100%;
+}
+
+.order_header{
+  font-weight: bold;
+}
+.spliter{
+  margin-right:5%;
+}

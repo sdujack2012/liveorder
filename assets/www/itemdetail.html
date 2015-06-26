@@ -1,0 +1,36 @@
+<div ui-content-for="title">
+  <span>Item Detail</span>
+</div>
+<div ui-content-for="navbarActionLeft">
+		<input type="button" class="btn sidebar-toggle" value="Back" ng-click="back();">
+    </div>
+	 <div ui-content-for="navbarActionRight">
+		<input type="button" class="btn sidebar-toggle" value="Logout" ng-click="logout();"> 
+    </div>
+	
+	
+<div class="scrollable" ui-state="searchBar">
+
+  <div class="scrollable-content" ui-scroll-bottom='bottomReached()'>
+    <div class="list-group">
+      <div class="list-group-item">
+		<span ng-repeat="(key, value) in ItemDetail">
+		<span class="order_header"> {{key}}: </span> <span ng-if="key != 'Description' && key != 'Item Image'"> {{ value }} </span>
+		<p ng-if="key == 'Description'"> {{ value }} </p>
+		<img width="100%" ng-if="key == 'Item Image'" ng-src="{{value}}" /> 
+		<br />
+		</span>  
+      </div>
+    </div>
+  </div>
+
+ 
+</div>
+<div ui-content-for="navbarActionLeft">
+		<input type="button" class="btn sidebar-toggle" value="Back" ng-click="back();">
+    </div>
+	 <div ui-content-for="navbarActionRight">
+		<input type="button" class="btn sidebar-toggle" value="Logout" ng-click="logout();"> 
+    </div>
+	
+	

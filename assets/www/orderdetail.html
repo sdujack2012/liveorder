@@ -1,0 +1,35 @@
+<div ui-content-for="title">
+  <span>Order Detail</span>
+</div>
+<div ui-content-for="navbarActionLeft">
+		<input type="button" class="btn sidebar-toggle" value="Back" ng-click="back();">
+    </div>
+	 <div ui-content-for="navbarActionRight">
+		<input type="button" class="btn sidebar-toggle" value="Logout" ng-click="logout();"> 
+    </div>
+<div class="scrollable" ui-state="searchBar">
+  <input
+    ng-if="Ui.active('searchBar')"
+    type="search"
+    class="form-control scrollable-header"
+    placeholder="Search.." />
+
+  <div class="scrollable-content" ui-scroll-bottom='bottomReached()'>
+    <div class="list-group">
+      <a ng-repeat="orderline in orderLines" class="list-group-item">
+	  
+		<span ng-repeat="(key, value) in orderline">
+		<span class="order_header"> {{key}}: </span><u ng-click="showItemDetail(value)" ng-if="key == 'itemNo'" >{{value}}</u> <span  ng-if="key != 'itemNo'" >{{value}}</span> <br />
+		</span>
+		
+      </a>
+    </div>
+  </div>
+
+  <a class="btn btn-block btn-lg btn-primary scrollable-footer" ui-toggle='searchBar'>
+    <i class="fa fa-search"></i> 
+    <span ui-hide="searchBar">Show</span>
+    <span ui-show="searchBar">Hide</span>
+    Search Bar
+  </a>
+</div>
